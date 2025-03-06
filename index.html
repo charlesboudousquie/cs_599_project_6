@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <title>The Blowup Game - Project 6 - CS399 Data Visualization - 2020.10.27</title>
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- jQuery UI CSS -->
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
+        <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+        <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/-uvXa5s5k6Sx9e2A"/></head>
+
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <h1>The Blowup Game with $100</h1>     
+            </div>
+        </nav>
+
+        <!-- Bootstrap grid setup -->
+        <div class="container">
+            <div id="selections" class="row">
+                <div class="form-group">
+                    <label for="formControlRange">Number of Trials: </label>
+                    <input id="numTrialsFromGUILabel" type="text" size="5"/>
+                    <input type="range" class="form-control-range" name="numTrialsFromGUI" id="numTrialsFromGUI" min="10" max="200" value="20" onmousemove="printValue('numTrialsFromGUI','numTrialsFromGUILabel')">
+                </div>
+                <div class="form-group">
+                    <label for="formControlRange">Number of Simulations: </label>
+                    <input id="numSimsFromGUILabel" type="text" size="5"/>
+                    <input type="range" class="form-control-range" name="numSimsFromGUI" id="numSimsFromGUI" min="1" max="10000" value="1000" step="1" onmousemove="printValue('numSimsFromGUI','numSimsFromGUILabel')">
+                </div>
+                <div class="form-group">
+                    <label for="formControlRange">Percent to Bet (%): </label>
+                    <input id="percentToBetFromGUILabel" type="text" size="5"/>
+                    <input type="range" class="form-control-range" name="percentToBetFromGUI" id="percentToBetFromGUI" min="1" max="100" value="10" step="1" onmousemove="printValue('percentToBetFromGUI','percentToBetFromGUILabel')">
+                </div>
+                <div class="form-group">
+                    <label for="formControlRange">Win Multiplier: </label>
+                    <input id="winMultiplierFromGUILabel" type="text" size="5"/>
+                    <input type="range" class="form-control-range" name="winMultiplierFromGUI" id="winMultiplierFromGUI" min="1" max="4" value="1.5" step="0.1" onmousemove="printValue('winMultiplierFromGUI','winMultiplierFromGUILabel')">
+                </div>                <div class="form-group">
+                    <label for="formControlRange">Chance of Blowup (%): </label>
+                    <input id="chanceOfBlowupFromGUILabel" type="text" size="5"/>
+                    <input type="range" class="form-control-range" name="chanceOfBlowupFromGUI" id="chanceOfBlowupFromGUI" min="1" max="100" value="10" step="1" onmousemove="printValue('chanceOfBlowupFromGUI','chanceOfBlowupFromGUILabel')">
+                </div>                
+                <div class="form-group">
+                    <label for="formControlRange">Percent of Bet to Blowup (%): </label>
+                    <input id="percentOfBetToBlowupFromGUILabel" type="text" size="5"/>
+                    <input type="range" class="form-control-range" name="percentOfBetToBlowupFromGUI" id="percentOfBetToBlowupFromGUI" min="1" max="100" value="100" step="1" onmousemove="printValue('percentOfBetToBlowupFromGUI','percentOfBetToBlowupFromGUILabel')">
+                </div>                
+                <div class="form-group">
+                    <label for="formControlRange">Number of Bins: </label>
+                    <input id="binNumberFromGUILabel" type="text" size="5"/>
+                    <input type="range" class="form-control-range" name="binSizeFromGUI" id="binNumberFromGUI" min="10" max="500" value="40" onmousemove="printValue('binNumberFromGUI','binNumberFromGUILabel')">
+                </div>
+                <div class="form-group">
+                    <label for="formControlRange">Kernel Epanechnikov: </label>
+                    <input id="kernelEpFromGUILabel" type="text" size="5"/>
+                    <input type="range" class="form-control-range" name="kernelEpFromGUI" id="kernelEpFromGUI" min="1" max="1000" value="20" onmousemove="printValue('kernelEpFromGUI','kernelEpFromGUILabel')">
+                </div>
+            </div>
+            <div class="row">
+                <div id="chart-area"></div>  
+            </div>
+        </div>
+
+    <!-- External JS libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/d3.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script>
+        function printValue(sliderID, textbox) {
+            var x = document.getElementById(textbox);
+            var y = document.getElementById(sliderID);
+            x.value = y.value;
+        }
+        window.onload = function() {
+            printValue('numSimsFromGUI','numSimsFromGUILabel');
+            printValue('numTrialsFromGUI','numTrialsFromGUILabel');
+            printValue('percentToBetFromGUI','percentToBetFromGUILabel');
+            printValue('winMultiplierFromGUI','winMultiplierFromGUILabel');
+            printValue('chanceOfBlowupFromGUI','chanceOfBlowupFromGUILabel');
+            printValue('percentOfBetToBlowupFromGUI','percentOfBetToBlowupFromGUILabel');
+            printValue('binNumberFromGUI','binNumberFromGUILabel');
+            printValue('kernelEpFromGUI','kernelEpFromGUILabel')
+        }
+    </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
