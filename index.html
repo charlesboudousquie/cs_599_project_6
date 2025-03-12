@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="description" content="">
-        <title>The Blowup Game - Project 6 - CS399 Data Visualization - 2020.10.27</title>
+        <title>The Blowup Game - Project 6 - CS399 Data Visualization - 2025.3.7</title>
         <!-- Bootstrap Core CSS -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <!-- jQuery UI CSS -->
@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="/-uvXa5s5k6Sx9e2A"/></head>
+    <!-- <link rel="stylesheet" href="/-uvXa5s5k6Sx9e2A"/></head> -->
 
     <body>
         <nav class="navbar navbar-default">
@@ -27,11 +27,13 @@
                 <div class="form-group">
                     <label for="formControlRange">Number of Trials: </label>
                     <input id="numTrialsFromGUILabel" type="text" size="5"/>
+                    <!-- todo change value back to 20 and min to 10-->
                     <input type="range" class="form-control-range" name="numTrialsFromGUI" id="numTrialsFromGUI" min="10" max="200" value="20" onmousemove="printValue('numTrialsFromGUI','numTrialsFromGUILabel')">
                 </div>
                 <div class="form-group">
                     <label for="formControlRange">Number of Simulations: </label>
                     <input id="numSimsFromGUILabel" type="text" size="5"/>
+                    <!-- todo change simulations back to 1000 -->
                     <input type="range" class="form-control-range" name="numSimsFromGUI" id="numSimsFromGUI" min="1" max="10000" value="1000" step="1" onmousemove="printValue('numSimsFromGUI','numSimsFromGUILabel')">
                 </div>
                 <div class="form-group">
@@ -95,12 +97,4 @@
     </script>
     </body>
 </html>
-
-
-
-
-
-
-
-
 
