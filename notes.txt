@@ -1,0 +1,104 @@
+Bin size(bandwidth) matters with histograms and can distort the
+data/graph:
+https://www.data-to-viz.com/caveat/bin_size.html
+
+
+Density Curves{
+https://www.youtube.com/watch?v=Txlm4ORI4Gs&t=93s
+
+Basic density curve:
+https://d3-graph-gallery.com/graph/density_basic.html
+
+A density curve is meant to visualize a histogram.
+The intervals in a density curve allow you to ignore
+outliers and have a large number of intervals without
+distorting the data to much.
+
+The area under the curve is 1 or 100%.
+
+Like calculus, the smaller the width of the bars
+(aka the more intervals you have), the more your graph
+looks like a curve anyways. (riemann sums)
+
+It is the range part of the X axis that makes a histogram
+different from a normal bar chart.
+
+
+Example Regular Frequency Distribution Graph:
+X axis: Price ranges
+Y Axis: NUMBER of items within that price range
+
+Regular Frequency Distribution:
+Bar graph where each bar tells you how many
+data items fall into a given X interval.
+
+Example Relative Frequency Distribution:
+X axis: Price Ranges
+Y Axis: PERCENTAGE of items within that price range
+
+
+}
+
+
+
+Kernel Density Estimation{
+https://www.youtube.com/watch?v=t1PEhjyzxLA
+
+// best
+https://www.youtube.com/watch?v=p-VOptZ0E5Y
+
+Part of extrapolation in data science.
+
+Extrapolation{
+  Estimating unknown values based
+  on a known sequence of values or facts.
+  A guestimate.
+  "The process of using info that is already known
+  to guess what might happen or what is".
+
+  Extrapolation differs from interpolation in that it
+  can go outside the range of data points you have.
+}
+
+Graph curves with too many sharp ridges are 
+called "Under smoothed".
+
+Graph curves with one or no bumps are "over smoothed".
+
+}
+
+
+Jitter Plots{
+Dots represent your data. A random jitter value is added
+to their x axis so that they don't all overlap eachother.
+}
+
+
+
+Tips{
+Tips:
+1. Store the final capital amount in an array.
+2. Round down the final capital amount to the nearest dollar: Math.floor()
+3. Make sure your numbers make sense (output using console.log(), then comment out so it doesn’t slow down the simulation)
+
+
+Tips for x-axis:
+*You’ll need to recalculate the largest amount of capital seen (after every change in the simulation) and make the width of the graph about $500 more than that.
+*Make the left edge of the graph -$100 so that it helps the density graph not clip funny.
+Tips for y-axis:
+*You’ll need to recalculate the largest density seen on the y-axis after every change in the simulation.
+
+
+
+Tips:
+Jitter height = height of graph as defined in the d3 y.range.
+Jitter width = 10 (so each point is ±5 offset from actual x location)
+I grabbed the circles from (https://www.d3-graph-gallery.com/graph/violin_jitter.html) and made them smaller, colored black, and very translucent (opacity set to 0.2).
+Other insight into updating points can be seen here: www.d3-graph-gallery.com/graph/scatter_basic.html
+When the graph changes, remove all points with “.remove()” and then add the new points. If you create the points like: var points.svg … then you can do points.remove() later to destroy them.
+Create the jittered points after the density curve so they sit on top.
+
+
+
+}
+
